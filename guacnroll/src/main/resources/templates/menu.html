@@ -72,12 +72,13 @@
             width: 100%;
             height: 100%;
             background: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
         }
         .modal-content {
             background: white;
             width: 90%;
             max-width: 500px;
-            margin: 50px auto;
             padding: 20px;
             border-radius: 8px;
             display: flex;
@@ -152,12 +153,6 @@
             border-radius: 8px 8px 0 0;
             margin-bottom: 15px;
         }
-        .food-item {
-            padding: 0 0 15px 0;
-        }
-        .food-item-content {
-            padding: 0 15px;
-        }
     </style>
 </head>
 <body>
@@ -186,7 +181,7 @@
         <h3>Complete Your Order</h3>
 
         <div class="item-details">
-            <img id="modalItemImage" src="" alt="Food item" style="width: 120px; height: 120px; object-fit: cover;">
+            <img id="modalItemImage" src="" alt="Food item">
             <div class="item-info">
                 <h4 id="modalItemName"></h4>
                 <p id="modalItemDescription"></p>
@@ -229,7 +224,7 @@
         document.getElementById('modalItemProtein').textContent = `Protein: ${item.protein}`;
         document.getElementById('modalItemPrice').textContent = item.price;
 
-        document.getElementById('orderModal').style.display = 'block';
+        document.getElementById('orderModal').style.display = 'flex';
     }
 
     function closeModal() {
